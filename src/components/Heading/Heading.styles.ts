@@ -1,20 +1,24 @@
 import styled from "styled-components";
 
-export const StyledHeading = styled.span<{ level: number }>`
-  font-family: "Courier New", monospace;
-  font-weight: bold;
-  margin: 0;
-
-  ${({ level }) => {
+export const StyledHeadingWrapper = styled.span<{
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+}>`
+  font-size: ${({ level }) => {
     switch (level) {
       case 1:
-        return "font-size: 2rem;";
+        return "32px";
       case 2:
-        return "font-size: 1.75rem;";
+        return "28px";
       case 3:
-        return "font-size: 1.5rem;";
+        return "24px";
+      case 4:
+        return "20px";
+      case 5:
+        return "18px";
+      case 6:
+        return "16px";
       default:
-        return "font-size: 1.25rem;";
+        return "16px";
     }
-  }}
+  }};
 `;
