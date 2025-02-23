@@ -11,11 +11,12 @@ export const TypographyBase = ({
   children,
   ...props
 }: TypographyBaseProps & { as?: keyof JSX.IntrinsicElements }) => {
-  const contextStyles = useTypography();
+  const groupStyles = useTypography();
 
-  // Merges styles, where props set in the component override those set in the Group
+  // Merges styles, where props set in the typography components (e.g., Heading, Paragraph)
+  // override those set in the Group.
   const mergedProps = {
-    ...contextStyles,
+    ...groupStyles,
     ...(color && { color }),
     ...(font && { font }),
     ...(size && { size }),
