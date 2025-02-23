@@ -1,6 +1,7 @@
 import { JSX } from "react";
 import { StyledTypographyBase } from "./TypographyBase.styles";
-import { BaseTypographyProps } from "../types";
+import { TypographyBaseProps } from "../../types";
+import { useTypography } from "../../context/TypographyContext";
 
 export const TypographyBase = ({
   as: Tag = "span",
@@ -9,15 +10,20 @@ export const TypographyBase = ({
   size,
   children,
   ...props
-}: BaseTypographyProps & { as?: keyof JSX.IntrinsicElements }) => {
+}: TypographyBaseProps & { as?: keyof JSX.IntrinsicElements }) => {
+  const contextStyles = useTypography();
+
+  // Merges styles, where props set in the component override those set in the Group
+  const mergedProps = {
+    ...contextStyles,
+    ...(color && { color }),
+    ...(font && { font }),
+    ...(size && { size }),
+    ...props,
+  };
+
   return (
-    <StyledTypographyBase
-      as={Tag}
-      color={color}
-      font={font}
-      size={size}
-      {...props}
-    >
+    <StyledTypographyBase as={Tag} {...mergedProps}>
       {children}
     </StyledTypographyBase>
   );

@@ -1,7 +1,11 @@
+import { Group } from "./components/Group";
 import { Heading } from "./components/Heading";
+import { Paragraph } from "./components/Paragraph";
 
-const ms = {
+const Mono = {
+  Group,
   Heading,
+  Paragraph,
 };
 
-export default ms;
+export default Mono;

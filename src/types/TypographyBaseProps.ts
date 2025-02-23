@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react";
 
-export type BaseTypographyProps = {
+export type TypographyBaseProps = {
   color?: string;
   font?: string;
   size?: string | number;

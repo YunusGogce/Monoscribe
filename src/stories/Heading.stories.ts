@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import ms from "..";
+import Mono from "..";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: "Example/Heading",
-  component: ms.Heading,
+  component: Mono.Heading,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-} satisfies Meta<typeof ms.Heading>;
+} satisfies Meta<typeof Mono.Heading>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

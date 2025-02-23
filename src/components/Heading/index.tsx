@@ -1,13 +1,13 @@
 import { JSX } from "react";
-import { BaseTypographyProps } from "../types";
+import { TypographyBaseProps } from "../../types";
 import { TypographyBase } from "../TypographyBase";
 import { StyledHeadingWrapper } from "./Heading.styles";
 
-type HeadingProps = BaseTypographyProps & {
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
+type HeadingProps = TypographyBaseProps & {
+  level: 1 | 2 | 3 | 4 | 5 | 6;
 };
 
-export const Heading = ({ level = 2, size, ...props }: HeadingProps) => {
+export const Heading = ({ level, size, ...props }: HeadingProps) => {
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
   return (
     <StyledHeadingWrapper level={level}>
