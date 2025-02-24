@@ -1,12 +1,18 @@
 import Mono from ".";
 
-function App() {
+const App = () => {
   return (
-    <Mono.Group color="red">
-      <Mono.Heading level={1}>Lorem Ipsum</Mono.Heading>
-      <Mono.Paragraph>Hello world!</Mono.Paragraph>
-    </Mono.Group>
+    <>
+      <Mono.Group color="black">
+        <Mono.Heading level={1} weight="bold" uppercase>
+          Lorem ipsum
+        </Mono.Heading>
+        <Mono.Paragraph color="red">
+          In a ipsum a elit euismod dapibus.
+        </Mono.Paragraph>
+      </Mono.Group>
+    </>
   );
-}
+};
 
 export default App;

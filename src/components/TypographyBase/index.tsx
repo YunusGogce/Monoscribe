@@ -5,22 +5,23 @@ import { useTypography } from "../../context/TypographyContext";
 
 export const TypographyBase = ({
   as: Tag = "span",
-  color,
-  font,
-  size,
   children,
+  uppercase,
+  italic,
+  underline,
+  strikethrough,
   ...props
 }: TypographyBaseProps & { as?: keyof JSX.IntrinsicElements }) => {
   const groupStyles = useTypography();
 
-  // Merges styles, where props set in the typography components (e.g., Heading, Paragraph)
-  // override those set in the Group.
+  // Merges styles, where component-level props (e.g., Heading, Paragraph) override those set in the Group.
   const mergedProps = {
     ...groupStyles,
-    ...(color && { color }),
-    ...(font && { font }),
-    ...(size && { size }),
     ...props,
+    ...(uppercase && { uppercase: "true" }),
+    ...(italic && { italic: "true" }),
+    ...(underline && { underline: "true" }),
+    ...(strikethrough && { strikethrough: "true" }),
   };
 
   return (
