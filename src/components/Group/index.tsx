@@ -4,7 +4,7 @@ import {
   TypographySettings,
 } from "../../context/TypographyContext";
 
-type GroupProps = TypographySettings & {
+export type GroupProps = TypographySettings & {
   children: ReactNode;
 };
 

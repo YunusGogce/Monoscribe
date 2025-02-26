@@ -3,7 +3,7 @@ import { TypographyBaseProps } from "../../types";
 import { TypographyBase } from "../TypographyBase";
 import { StyledHeadingWrapper } from "./Heading.styles";
 
-type HeadingProps = TypographyBaseProps & {
+export type HeadingProps = TypographyBaseProps & {
   level: 1 | 2 | 3 | 4 | 5 | 6;
 };
 

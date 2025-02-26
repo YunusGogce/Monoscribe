@@ -1,7 +1,17 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist", 
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ES2020",
+    "jsx": "react-jsx",
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "src/stories"
   ]
 }

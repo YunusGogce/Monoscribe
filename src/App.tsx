@@ -1,4 +1,4 @@
-import Mono from ".";
+import { Mono } from ".";
 
 const App = () => {
   return (
