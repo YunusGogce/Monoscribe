@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
-import commonjs from "@rollup/plugin-commonjs";
 
 export default defineConfig(() => ({
   plugins: [
@@ -10,7 +9,6 @@ export default defineConfig(() => ({
       insertTypesEntry: true,
       exclude: ["src/stories/**"],
     }),
-    commonjs(),
   ],
   build: {
     lib: {
