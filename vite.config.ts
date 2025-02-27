@@ -1,21 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
+import commonjs from "@rollup/plugin-commonjs";
 
-export default defineConfig({
+export default defineConfig(() => ({
   plugins: [
     react(),
     dts({
       insertTypesEntry: true,
       exclude: ["src/stories/**"],
     }),
+    commonjs(),
   ],
   build: {
     lib: {
       entry: "./src/index.ts",
       name: "Monoscribe",
       fileName: (format) => `monoscribe.${format}.js`,
-      formats: ["es", "cjs"],
+      formats: ["es", "cjs", "umd"],
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -30,4 +32,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

@@ -1,6 +1,6 @@
 {
   "name": "monoscribe",
-  "version": "0.1.0-beta.4",
+  "version": "0.1.0-beta.5",
   "type": "module",
   "main": "dist/monoscribe.cjs.js",
   "module": "dist/monoscribe.es.js",
@@ -15,8 +15,8 @@
     "prettier": "prettier --write ."
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": ">=16.8.0 <20.0.0",
+    "react-dom": ">=16.8.0 <20.0.0"
   },
   "dependencies": {
     "styled-components": "^6.1.15"
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
     "@eslint/js": "^9.19.0",
+    "@rollup/plugin-commonjs": "^28.0.2",
     "@storybook/addon-essentials": "^8.5.7",
     "@storybook/addon-interactions": "^8.5.7",
     "@storybook/addon-links": "^8.5.7",
