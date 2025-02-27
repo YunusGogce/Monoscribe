@@ -1,6 +1,7 @@
 {
   "name": "monoscribe",
-  "version": "0.1.0-beta.6",
+  "description": "A lightweight and customizable typography library for React",
+  "version": "0.1.0-beta.7",
   "type": "module",
   "main": "dist/monoscribe.cjs.js",
   "module": "dist/monoscribe.es.js",
