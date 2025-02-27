@@ -1,3 +1,4 @@
+import * as React from "react";
 import { TypographyBaseProps } from "../../types";
 import { TypographyBase } from "../TypographyBase";
 

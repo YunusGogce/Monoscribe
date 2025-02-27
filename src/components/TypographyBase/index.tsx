@@ -1,7 +1,7 @@
-import { JSX } from "react";
 import { StyledTypographyBase } from "./TypographyBase.styles";
 import { TypographyBaseProps } from "../../types";
 import { useTypography } from "../../context/TypographyContext";
+import * as React from "react";
 
 export const TypographyBase = ({
   as: Tag = "span",
@@ -11,7 +11,7 @@ export const TypographyBase = ({
   underline,
   strikethrough,
   ...props
-}: TypographyBaseProps & { as?: keyof JSX.IntrinsicElements }) => {
+}: TypographyBaseProps & { as?: keyof React.JSX.IntrinsicElements }) => {
   const groupStyles = useTypography();
 
   // Merges styles, where component-level props (e.g., Heading, Paragraph) override those set in the Group.
