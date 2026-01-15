@@ -1,0 +1,46 @@
+# Development files
+src/
+.storybook/
+assets/
+
+# Build and config files
+tsconfig.json
+vite.config.ts
+eslint.config.js
+
+# Documentation and metadata
+.git
+.gitignore
+.github/
+
+# Storybook
+*.stories.ts
+*.stories.tsx
+storybook-static/
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Testing
+.nyc_output/
+coverage/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# pnpm
+pnpm-lock.yaml

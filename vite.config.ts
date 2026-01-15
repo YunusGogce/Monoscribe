@@ -12,6 +12,9 @@ export default defineConfig(() => ({
       exclude: ["src/stories/**"],
     }),
   ],
+  server: {
+    open: true,
+  },
   build: {
     lib: {
       entry: "./src/index.ts",
@@ -19,6 +22,7 @@ export default defineConfig(() => ({
       fileName: (format) => `monoscribe.${format}.js`,
       formats: ["es", "cjs", "umd"],
     },
+    sourcemap: true,
     rollupOptions: {
       external: ["react", "react-dom"],
       input: {

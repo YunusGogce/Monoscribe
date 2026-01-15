@@ -1,13 +1,42 @@
 {
   "name": "monoscribe",
-  "description": "A lightweight and customizable typography library for React",
-  "version": "0.1.0-beta.7",
+  "description": "A lightweight and customizable typography component library for React, designed to simplify text styling with focus on monospace fonts",
+  "version": "0.1.0-beta.8",
   "type": "module",
   "main": "dist/monoscribe.cjs.js",
   "module": "dist/monoscribe.es.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/monoscribe.es.js",
+      "require": "./dist/monoscribe.cjs.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "Yunus Gogce",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunusgogce/monoscribe"
+  },
+  "homepage": "https://github.com/yunusgogce/monoscribe#readme",
+  "bugs": {
+    "url": "https://github.com/yunusgogce/monoscribe/issues"
+  },
+  "keywords": [
+    "react",
+    "typography",
+    "components",
+    "monospace",
+    "styled-components",
+    "accessibility"
+  ],
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
